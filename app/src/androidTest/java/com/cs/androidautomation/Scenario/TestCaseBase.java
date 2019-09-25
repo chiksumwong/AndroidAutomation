@@ -5,6 +5,7 @@ import android.content.Intent;
 
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
+import androidx.test.uiautomator.UiDevice;
 
 //app MainActivity
 import com.cs.androidautomation.MainActivity;
@@ -19,6 +20,8 @@ public class TestCaseBase extends ActivityTestRule<MainActivity> {
     protected Intent intent;
 
     protected MainActivity mainActivity;
+
+    protected UiDevice device;
 
     @Rule
     public Timeout globalTimeout = Timeout.seconds(2000 * 10);
