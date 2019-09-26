@@ -23,6 +23,6 @@ public class Case_001_Calculation_Add extends TestCaseBase {
 
         //UiDevice
         device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation());
-
+        device.click(653, 1430);
     }
 }
