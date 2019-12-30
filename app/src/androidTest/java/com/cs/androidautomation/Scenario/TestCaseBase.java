@@ -8,8 +8,7 @@ import androidx.test.uiautomator.UiDevice;
 
 //app MainActivity
 import com.cs.androidautomation.Function.Sleep;
-import com.cs.androidautomation.MainActivity;
-import com.cs.androidautomation.R;
+import com.cs.androidautomation.view.activity.MainActivity;
 
 import org.junit.Rule;
 import org.junit.rules.Timeout;
@@ -18,7 +17,6 @@ import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.Espresso.pressBack;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
-import static androidx.test.espresso.matcher.ViewMatchers.hasChildCount;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
@@ -64,8 +62,8 @@ public class TestCaseBase extends ActivityTestRule<MainActivity> {
         onView(withIndex(withText(startsWith(text)),index)).perform(click());
     }
     public void countRecyclerViewItem(int expectedCount){
-        onView(withId(R.id.recycler_view))// id of recycler view
-                .check(matches(hasChildCount(expectedCount)));
+//        onView(withId(R.id.recycler_view))// id of recycler view
+//                .check(matches(hasChildCount(expectedCount)));
     }                    //Check the count of recycler view item, e.g. list of table
 //Ui Device
     public void clickWithCoordinate(int x, int y){

@@ -9,7 +9,8 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner" //Step 2: change to support lib runner
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //Step 2: change to support lib runner
     }
     buildTypes {
         release {
