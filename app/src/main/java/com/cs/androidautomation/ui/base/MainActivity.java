@@ -1,10 +1,12 @@
-package com.cs.androidautomation.view.activity;
+package com.cs.androidautomation.ui.base;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import com.cs.androidautomation.R;
+import com.cs.androidautomation.ui.login.LoginActivity;
+import com.cs.androidautomation.ui.login.SignupActivity;
 
 public class MainActivity extends AppCompatActivity {
 

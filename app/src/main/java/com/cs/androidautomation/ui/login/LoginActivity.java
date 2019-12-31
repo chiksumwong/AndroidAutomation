@@ -1,4 +1,4 @@
-package com.cs.androidautomation.view.activity;
+package com.cs.androidautomation.ui.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,13 +32,14 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String usernameText = username.getText().toString();
 
-                // Store the user info in local
+                // Store the user info in local - SharedPreferences
                 SharedPreferences sharedPreferences;
                 sharedPreferences = getSharedPreferences("UserInfo", MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("USER_NAME", usernameText);
                 editor.apply();
 
+                // Toast
                 Toast.makeText(getApplicationContext(), "HI! " + usernameText, Toast.LENGTH_LONG).show();
             }
         });
@@ -46,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Intent
                 Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
                 startActivity(intent);
             }

@@ -1,4 +1,4 @@
-package com.cs.androidautomation.view.activity;
+package com.cs.androidautomation.ui.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
