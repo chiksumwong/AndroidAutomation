@@ -18,10 +18,16 @@ Report path:
 
 ## Asynchronous
 - "Asynchronous" can be handled by "Callbacks" and "RXJava"
+- Callbacks (to handle asynchronous tasks)
 
 ## Function
-- Intent
-- SharedPreferences
 - Toast
+- Intent
+
+## Store
+- SharedPreferences (global variable)
 - Room (data store in local SQLite database)
-- Callbacks (to handle asynchronous tasks)
+
+## Layout
+- Tool Bar
+- Drawer Layout

@@ -8,7 +8,7 @@ import androidx.test.uiautomator.UiDevice;
 
 //app MainActivity
 import com.cs.androidautomation.Function.Sleep;
-import com.cs.androidautomation.ui.base.MainActivity;
+import com.cs.androidautomation.view.base.MainActivity;
 
 import org.junit.Rule;
 import org.junit.rules.Timeout;
