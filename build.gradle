@@ -4,7 +4,6 @@ buildscript {
     repositories {
         google()
         jcenter()
-        
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.3'
@@ -18,7 +17,6 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
     }
 }
 
@@ -30,7 +28,7 @@ task clean(type: Delete) {
 ext {
     compileSdkVersion = 29          //the api version of Android that you compile against
     buildToolsVersion = "29.0.0"    //the version of the compilers
-    minSdkVersion = 18
+    minSdkVersion = 21
     targetSdkVersion = 29
 
     roomVersion = '2.0.0'

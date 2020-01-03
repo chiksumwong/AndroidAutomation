@@ -10,6 +10,7 @@ import androidx.room.PrimaryKey;
 @Entity
 public class User {
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "uid")
     private int uid;
 
     @ColumnInfo(name = "user_name")

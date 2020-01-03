@@ -1,18 +1,20 @@
-package com.cs.androidautomation.view.base;
+package com.cs.androidautomation.ui.base;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Toast;
-import android.widget.Toolbar;
+
+import androidx.appcompat.widget.Toolbar;
 
 import com.cs.androidautomation.R;
-import com.cs.androidautomation.view.login.LoginActivity;
-import com.cs.androidautomation.view.login.SignupActivity;
+import com.cs.androidautomation.ui.login.LoginActivity;
+import com.cs.androidautomation.ui.todo.tasks.TasksActivity;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,12 +30,11 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("UserInfo", MODE_PRIVATE);
         final String userName = sharedPreferences.getString("USER_NAME", "DEFAULT");
 
-        if (userName.equals("") || userName.equals("DEFAULT")){
-            goLogin();
-        }else {
-            setToolBar();
-            setDrawerLayout();
-        }
+//        if (userName.equals("") || userName.equals("DEFAULT")){
+//            goLogin();
+//        }else {
+//            goTodo();
+//        }
     }
 
     public void goLogin(){
@@ -41,9 +42,17 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void goTodo(){
+        Intent intent = new Intent(this, TasksActivity.class);
+        startActivity(intent);
+    }
+
     public void setToolBar(){
-        // Set up toolbar
-//        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar ab = getSupportActionBar();
+        ab.setHomeAsUpIndicator(R.drawable.ic_menu);
+        ab.setDisplayHomeAsUpEnabled(true); // make the icon clickable and < at the left of the icon
     }
 
     public void setDrawerLayout(){
@@ -77,5 +86,22 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     }
                 });
+    }
+
+    public void setFragment(){
+
+    }
+
+    /* Drawer Layout*/
+    //Click the left icon then show the drawer layout
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                // Open the navigation drawer when the home icon is selected from the toolbar.
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -13,6 +13,22 @@ Report path:
 - "View" contains no logic
 - "Presenter" is middleware between "View" and "Model"
 
+## Project Structure
+- "Contract Class" which defines the connection between "View" and "Presenter"
+- "Activity" which creates "Fragments" and "Presenters"
+- "Fragment" which implements the "View Interface" 
+- "Presenter" which implement the "Presenter Interface"
+> "Presenter" hosts "business logic" with feature, and "View" handles the "UI" work.
+> "View" contains no logic; it converts the "Presenter 's commands" to "UI actions".
+> "View" listens for user actions, which are then passed to the presenter.
+
+Todo:
+- Tasks - Used to manage a list of tasks.
+- TaskDetail - Used to read or delete a task.
+- AddEditTask - Used to create or edit tasks.
+- Statistics - Displays statistics related to tasks.
+
+
 ## Structure - MVVM
 - data binding "State Data" (VM) and "Screen State" (View)
 
@@ -30,4 +46,5 @@ Report path:
 
 ## Layout
 - Tool Bar
-- Drawer Layout
+- Drawer Layout (there have a icon in left side. click it then the drawer layout will show.)
+- Fragment
