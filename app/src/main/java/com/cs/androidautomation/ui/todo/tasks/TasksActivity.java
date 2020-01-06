@@ -30,7 +30,7 @@ import androidx.test.espresso.IdlingResource;
 
 import com.cs.androidautomation.R;
 import com.cs.androidautomation.data.mock.Injection;
-import com.cs.androidautomation.ui.todo.statistics.StatisticsActivity;
+import com.cs.androidautomation.ui.todo.taskStatistics.StatisticsActivity;
 import com.cs.androidautomation.util.ActivityUtils;
 import com.cs.androidautomation.util.EspressoIdlingResource;
 import com.google.android.material.navigation.NavigationView;
@@ -63,14 +63,12 @@ public class TasksActivity extends AppCompatActivity {
             setupDrawerContent(navigationView);
         }
 
-
-        TasksFragment tasksFragment =
-                (TasksFragment) getSupportFragmentManager().findFragmentById(R.id.contentFrame);
+        // Create Fragment
+        TasksFragment tasksFragment = (TasksFragment) getSupportFragmentManager().findFragmentById(R.id.contentFrame);
         if (tasksFragment == null) {
             // Create the fragment
             tasksFragment = TasksFragment.newInstance();
-            ActivityUtils.addFragmentToActivity(
-                    getSupportFragmentManager(), tasksFragment, R.id.contentFrame);
+            ActivityUtils.addFragmentToActivity(getSupportFragmentManager(), tasksFragment, R.id.contentFrame);
         }
 
         // Create the presenter

@@ -107,6 +107,10 @@ public class TasksFragment extends Fragment implements TasksContract.View {
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_tasks, container, false);
 
+        // container parameter is the parent ViewGroup (from the activity's layout) in which our Fragment layout will be inserted.
+        // savedInstanceState is a Bundle that provide data about the previous instance of the Fragment.
+
+
         // Set up tasks view
         ListView listView = (ListView) root.findViewById(R.id.tasks_list);
         listView.setAdapter(mListAdapter);

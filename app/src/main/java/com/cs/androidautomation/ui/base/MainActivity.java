@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 //        }else {
 //            goTodo();
 //        }
+        goTodo();
     }
 
     public void goLogin(){

@@ -17,6 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.todo.tasks.TasksActivity"/>
+        <activity android:name=".ui.todo.taskDetail.TaskDetailActivity"/>
+        <activity android:name=".ui.todo.taskModify.AddEditTaskActivity"/>
+        <activity android:name=".ui.todo.taskStatistics.StatisticsActivity"/>
     </application>
 
 </manifest>

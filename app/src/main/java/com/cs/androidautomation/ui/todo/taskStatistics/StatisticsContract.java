@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cs.androidautomation.ui.todo.statistics;
+package com.cs.androidautomation.ui.todo.taskStatistics;
 
 
 import com.cs.androidautomation.ui.base.BasePresenter;

@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.cs.androidautomation.R;
 import com.cs.androidautomation.data.db.user.User;
 import com.cs.androidautomation.data.db.user.UserDatabase;
+import com.cs.androidautomation.ui.base.MainActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -49,6 +50,9 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putString("USER_NAME", usernameText);
                     editor.apply();
                 }
+
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
             }
         });
 
